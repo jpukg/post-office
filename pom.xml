@@ -53,7 +53,7 @@
 					<bindingDirectory>src/main/resources/schema</bindingDirectory>
 					<forceRegenerate>true</forceRegenerate>
 					<generateDirectory>${project.basedir}/src/main/java</generateDirectory>
-					<generatePackage>correios.wsdl</generatePackage>
+					<generatePackage>postoffice.wsdl</generatePackage>
 					<schemaLanguage>WSDL</schemaLanguage>
 					<schemas>
 						<schema>
