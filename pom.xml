@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.sandbox</groupId>
-	<artifactId>correios</artifactId>
+	<artifactId>postoffice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<parent>
@@ -37,48 +37,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<!-- tag::wsdl[] -->
-			<plugin>
-				<groupId>org.jvnet.jaxb2.maven2</groupId>
-				<artifactId>maven-jaxb2-plugin</artifactId>
-				<version>0.12.3</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<bindingDirectory>src/main/resources/schema</bindingDirectory>
-					<forceRegenerate>true</forceRegenerate>
-					<generateDirectory>${project.basedir}/src/main/java</generateDirectory>
-					<generatePackage>correios.wsdl</generatePackage>
-					<schemaLanguage>WSDL</schemaLanguage>
-					<schemas>
-						<schema>
-							<url>https://apps.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl</url>
-						</schema>
-					</schemas>
-					<!-- http://azagorneanu.blogspot.com.br/2011/09/configure-maven-to-generate-classes.html -->
-					<plugins>
-						<plugin>
-							<groupId>org.jvnet.jaxb2_commons</groupId>
-							<artifactId>jaxb2-basics</artifactId>
-							<version>0.6.2</version>
-						</plugin>
-						<plugin>
-							<groupId>org.jvnet.jaxb2_commons</groupId>
-							<artifactId>jaxb2-basics-annotate</artifactId>
-							<version>0.6.2</version>
-						</plugin>
-					</plugins>
-					<args>
-						<arg>-Xannotate</arg>
-					</args>
-				</configuration>
-			</plugin>
-			<!-- end::wsdl[] -->
 		</plugins>
 	</build>
 
