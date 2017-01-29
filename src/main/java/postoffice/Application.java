@@ -21,7 +21,7 @@ public class Application {
 	@Bean
 	CommandLineRunner lookup(final PostOfficeClient client) {
 		return args -> {
-			String ticker = "13219201";
+			String ticker = "04538133";
 
 			if (args.length > 0) {
 				ticker = args[0];
